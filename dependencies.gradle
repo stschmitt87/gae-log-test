@@ -1,0 +1,37 @@
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+  implementation "io.ktor:ktor-server-servlet:$ktor_version"
+  implementation "io.ktor:ktor-html-builder:$ktor_version"
+  implementation "io.ktor:ktor-auth:$ktor_version"
+  implementation "io.ktor:ktor-client-apache:$ktor_version"
+
+  implementation "javax.servlet:javax.servlet-api:4.0.1"
+
+  implementation "org.jetbrains.exposed:exposed:0.17.7"
+  implementation "com.google.cloud.sql:mysql-socket-factory-connector-j-8:1.0.15"
+  implementation "mysql:mysql-connector-java:8.0.18"
+
+  implementation "com.zaxxer:HikariCP:3.4.1"
+
+  // hotfix for new ktor version https://github.com/rharter/ktor-moshi/issues/7
+  //implementation "com.ryanharter.ktor:ktor-moshi:1.0.1"
+  implementation 'com.github.cs125-illinois:ktor-moshi:1.0.3'
+
+  implementation "com.squareup.moshi:moshi-kotlin:1.9.2"
+  implementation "com.squareup.moshi:moshi-adapters:1.9.2"
+  kapt "com.squareup.moshi:moshi-kotlin-codegen:1.9.2"
+
+  implementation "com.google.inject:guice:4.2.2"
+
+  implementation "com.google.appengine:appengine-api-1.0-sdk:1.9.78"
+
+  implementation "com.google.firebase:firebase-admin:6.12.2"
+
+  implementation "org.apache.commons:commons-csv:1.8"
+
+  implementation "com.google.cloud:google-cloud-logging-logback:$gce_logback_version"
+
+}

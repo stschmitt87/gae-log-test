@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         version="3.1"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+  <servlet>
+    <servlet-name>KtorServlet</servlet-name>
+    <display-name>KtorServlet</display-name>
+    <servlet-class>io.ktor.server.servlet.ServletApplicationEngine</servlet-class>
+    <!-- path to application.conf file, required -->
+    <init-param>
+      <param-name>io.ktor.config</param-name>
+      <param-value>application.conf</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>KtorServlet</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+</web-app>
