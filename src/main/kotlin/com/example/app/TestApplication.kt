@@ -13,7 +13,16 @@ fun Application.main() {
   // This uses use the logger to log every call (request/response)
   install(CallLogging)
 
-  TestController().initRoute(this)
+  TestApplication().initialize(this)
 }
 
+@Suppress("unused")
 inline fun <reified T : Any> T.logger(): Logger = LoggerFactory.getLogger(T::class.java)
+
+class TestApplication {
+
+  fun initialize(application: Application) {
+    TestController().initRoute(application)
+  }
+
+}

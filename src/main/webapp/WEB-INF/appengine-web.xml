@@ -3,10 +3,12 @@
   <threadsafe>true</threadsafe>
   <runtime>java8</runtime>
   <service>log-test</service>
+  <instance-class>F2</instance-class>
   <staging>
     <enable-jar-classes>true</enable-jar-classes>
   </staging>
-  <system-properties>
-    <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
-  </system-properties>
+  <automatic-scaling>
+    <max-concurrent-requests>40</max-concurrent-requests>
+    <target-throughput-utilization>0.9</target-throughput-utilization>
+  </automatic-scaling>
 </appengine-web-app>
